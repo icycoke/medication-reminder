@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Medication Reminder</string>
+    <string name="app_intro">A simple self-management app</string>
+
 </resources>
