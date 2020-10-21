@@ -9,13 +9,11 @@ public class MyWelcomeActivity extends com.stephentuso.welcome.WelcomeActivity {
         return new WelcomeConfiguration.Builder(this)
                 .defaultTitleTypefacePath("Montserrat-Bold.ttf")
                 .defaultHeaderTypefacePath("Montserrat-Bold.ttf")
-
                 .page(new BasicPage(R.drawable.ic_launcher_foreground,
                         getResources().getString(R.string.app_name),
                         getResources().getString(R.string.app_intro))
                         .background(R.color.colorPrimary)
                 )
-
                 .swipeToDismiss(true)
                 .exitAnimation(android.R.anim.fade_out)
                 .build();
