@@ -13,7 +13,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static String TAG = "MainActivity";
+    private static String TAG = MainActivity.class.getSimpleName();
 
     private AppDatabase appDatabase;
 
@@ -29,17 +29,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if (appDatabase.openAppDao().getOpenTimes() == 0) {
-                    Log.d(TAG, "run: show the welcome interface");
                     Intent intent = new Intent(MainActivity.this, MyWelcomeActivity.class);
                     startActivity(intent);
-
+                    Log.d(TAG, "run: show the welcome interface");
                 } else {
                     Log.d(TAG, "run: skip the welcome interface");
                     Log.d(TAG, "run: last open: " + appDatabase.openAppDao().getLastOpenDate().toString());
                 }
                 appDatabase.openAppDao().insert(new OpenApp(new Date()));
+                Log.d(TAG, "run: latest open date inserted");
             }
         });
         queryThread.start();
+
+        Intent intent = new Intent(this, FunctionsActivity.class);
+        startActivity(intent);
     }
 }
