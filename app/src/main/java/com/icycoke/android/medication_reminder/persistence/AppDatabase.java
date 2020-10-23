@@ -8,9 +8,11 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
 import com.icycoke.android.medication_reminder.dao.OpenAppDao;
+import com.icycoke.android.medication_reminder.dao.SavedLocationDao;
 import com.icycoke.android.medication_reminder.pojo.OpenApp;
+import com.icycoke.android.medication_reminder.pojo.SavedLocation;
 
-@Database(entities = {OpenApp.class}, version = 1)
+@Database(entities = {OpenApp.class, SavedLocation.class}, version = 1)
 @TypeConverters(Converters.class)
 public abstract class AppDatabase extends RoomDatabase {
 
@@ -31,4 +33,6 @@ public abstract class AppDatabase extends RoomDatabase {
     }
 
     public abstract OpenAppDao openAppDao();
+
+    public abstract SavedLocationDao savedLocationDao();
 }

@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Medication Reminder</string>
-    <string name="app_intro">A simple self-management app</string>
 
     <string name="title_activity_functions">MainActivity</string>
-    <string name="title_periodic_reminder">Periodic Reminder</string>
-    <string name="title_location_reminder">Location Reminder</string>
+    <string name="title_periodic_alarm">Periodic Alarm</string>
+    <string name="title_location_alarm">Location Alarm</string>
 
     <string name="title_new_reminder">New Reminder</string>
+
+    <string name="welcome_home">A simple self-management app</string>
+    <string name="welcome_periodic">Remember all important time</string>
+    <string name="welcome_location">Never forget to take medicine</string>
 </resources>

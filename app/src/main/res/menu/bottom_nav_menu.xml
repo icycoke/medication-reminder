@@ -3,12 +3,12 @@
 
     <item
             android:id="@+id/navigation_periodic"
-            android:icon="@drawable/ic_clock"
-            android:title="@string/title_periodic_reminder" />
+            android:icon="@drawable/ic_clock_black"
+            android:title="@string/title_periodic_alarm" />
 
     <item
             android:id="@+id/navigation_location"
-            android:icon="@drawable/ic_location"
-            android:title="@string/title_location_reminder" />
+            android:icon="@drawable/ic_location_black"
+            android:title="@string/title_location_alarm" />
 
 </menu>

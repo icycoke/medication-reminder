@@ -8,6 +8,7 @@ import android.util.Log;
 
 import com.icycoke.android.medication_reminder.persistence.AppDatabase;
 import com.icycoke.android.medication_reminder.pojo.OpenApp;
+import com.icycoke.android.medication_reminder.welcome.MyWelcomeActivity;
 
 import java.util.Date;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Thread queryThread = new Thread(new Runnable() {
             @Override
             public void run() {
+                // appDatabase.openAppDao().clear();
                 if (appDatabase.openAppDao().getOpenTimes() == 0) {
                     Intent intent = new Intent(MainActivity.this, MyWelcomeActivity.class);
                     startActivity(intent);

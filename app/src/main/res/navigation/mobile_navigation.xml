@@ -8,12 +8,12 @@
     <fragment
             android:id="@+id/navigation_periodic"
             android:name="com.icycoke.android.medication_reminder.ui.periodic.PeriodicFragment"
-            android:label="@string/title_periodic_reminder"
+            android:label="@string/title_periodic_alarm"
             tools:layout="@layout/fragment_periodic" />
 
     <fragment
             android:id="@+id/navigation_location"
             android:name="com.icycoke.android.medication_reminder.ui.location.LocationFragment"
-            android:label="@string/title_location_reminder"
+            android:label="@string/title_location_alarm"
             tools:layout="@layout/fragment_location" />
 </navigation>
