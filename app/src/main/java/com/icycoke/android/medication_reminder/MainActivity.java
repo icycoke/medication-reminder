@@ -1,11 +1,12 @@
 package com.icycoke.android.medication_reminder;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.maps.MapView;
 import com.icycoke.android.medication_reminder.persistence.AppDatabase;
 import com.icycoke.android.medication_reminder.pojo.OpenApp;
 import com.icycoke.android.medication_reminder.welcome.MyWelcomeActivity;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private static String TAG = MainActivity.class.getSimpleName();
 
     private AppDatabase appDatabase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, FunctionsActivity.class);
         startActivity(intent);
+
     }
 }

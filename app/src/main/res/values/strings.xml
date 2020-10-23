@@ -10,4 +10,6 @@
     <string name="welcome_home">A simple self-management app</string>
     <string name="welcome_periodic">Remember all important time</string>
     <string name="welcome_location">Never forget to take medicine</string>
+
+    <string name="button_set_home">Set home location</string>
 </resources>
