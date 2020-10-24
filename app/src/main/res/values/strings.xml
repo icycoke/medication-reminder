@@ -12,4 +12,6 @@
     <string name="welcome_location">Never forget to take medicine</string>
 
     <string name="button_set_home">Set home location</string>
+
+    <string name="home">Home</string>
 </resources>

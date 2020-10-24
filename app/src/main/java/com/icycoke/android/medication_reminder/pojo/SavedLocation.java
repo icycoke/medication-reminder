@@ -7,6 +7,11 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "saved_location")
 public class SavedLocation {
 
+    public SavedLocation(Double latitude, Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+
     @PrimaryKey(autoGenerate = true)
     public Integer index;
 

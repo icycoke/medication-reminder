@@ -22,7 +22,8 @@
 
         <activity
                 android:name=".FunctionsActivity"
-                android:label="@string/title_activity_functions"></activity>
+                android:label="@string/title_activity_functions">
+        </activity>
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -31,6 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
                 android:name=".welcome.MyWelcomeActivity"
                 android:theme="@style/WelcomeScreenTheme" />

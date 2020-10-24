@@ -13,6 +13,7 @@
     <Button
             android:layout_width="240dp"
             android:layout_height="80dp"
+            android:onClick="onSetHomeClick"
             android:text="@string/button_set_home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
