@@ -14,4 +14,7 @@
     <string name="button_set_home">Set home location</string>
 
     <string name="home">Home</string>
+
+    <string name="notification_title_exit_geofence">Reminder</string>
+    <string name="notification_text_exit_geofence">Don\'t forget to bring medicine when you leave home!</string>
 </resources>

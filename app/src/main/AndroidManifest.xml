@@ -20,11 +20,11 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key" />
 
+        <receiver android:name=".GeofenceBroadcastReceiver"/>
+
         <activity
                 android:name=".FunctionsActivity"
-                android:label="@string/title_activity_functions">
-        </activity>
-
+                android:label="@string/title_activity_functions"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
                 android:name=".welcome.MyWelcomeActivity"
                 android:theme="@style/WelcomeScreenTheme" />

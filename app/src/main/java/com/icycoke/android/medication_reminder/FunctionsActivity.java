@@ -20,8 +20,6 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.icycoke.android.medication_reminder.fragment.LocationFragment;
 import com.icycoke.android.medication_reminder.fragment.PeriodicFragment;
@@ -30,8 +28,8 @@ import com.icycoke.android.medication_reminder.pojo.SavedLocation;
 
 public class FunctionsActivity extends AppCompatActivity {
 
-    private static String TAG = FunctionsActivity.class.getSimpleName();
-    private static int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
+    private static final String TAG = FunctionsActivity.class.getSimpleName();
+    private static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
 
     private FusedLocationProviderClient fusedLocationProviderClient;
     private SetHomeOnClickListener setHomeOnClickListener;
@@ -63,9 +61,7 @@ public class FunctionsActivity extends AppCompatActivity {
                 }
             };
 
-    public void onSetHomeClick(View view) {
-        getLocationPermission();
-
+    public void setHomeOnClick(View view) {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             LocationRequest locationRequest = LocationRequest.create()
@@ -114,22 +110,8 @@ public class FunctionsActivity extends AppCompatActivity {
                 .replace(R.id.fragment_container, new PeriodicFragment())
                 .commit();
 
-        getLocationPermission();
-
         appDatabase = AppDatabase.getInstance(getApplicationContext());
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-    }
-
-    protected void getLocationPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED) {
-            Log.d(TAG, "getLocationPermission: location permission has been gotten");
-        } else {
-            Log.d(TAG, "getLocationPermission: requesting location permission");
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
-        }
     }
 
     public interface SetHomeOnClickListener {

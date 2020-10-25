@@ -15,7 +15,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     private AppDatabase appDatabase;
 
