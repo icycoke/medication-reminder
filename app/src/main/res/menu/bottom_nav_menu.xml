@@ -4,7 +4,7 @@
     <item
             android:id="@+id/navigation_periodic"
             android:icon="@drawable/ic_clock_black"
-            android:title="@string/title_periodic_alarm" />
+            android:title="@string/title_event_alarm" />
 
     <item
             android:id="@+id/navigation_location"

@@ -2,13 +2,13 @@
     <string name="app_name">Medication Reminder</string>
 
     <string name="title_activity_functions">MainActivity</string>
-    <string name="title_periodic_alarm">Periodic Alarm</string>
+    <string name="title_event_alarm">Event Alarm</string>
     <string name="title_location_alarm">Location Alarm</string>
 
     <string name="title_new_reminder">New Reminder</string>
 
     <string name="welcome_home">A simple self-management app</string>
-    <string name="welcome_periodic">Remember all important time</string>
+    <string name="welcome_event">Remember all important event</string>
     <string name="welcome_location">Never forget to take medicine</string>
 
     <string name="button_set_home">Set home location</string>
@@ -17,4 +17,12 @@
 
     <string name="notification_title_exit_geofence">Reminder</string>
     <string name="notification_text_exit_geofence">Don\'t forget to bring medicine when you leave home!</string>
+
+    <string name="event_details">Event Details</string>
+    <string name="event_title_hint">Event title</string>
+    <string name="event_location_hint">Event location</string>
+    <string name="event_description_hint">Event description</string>
+    <string name="event_start_time">Event start time</string>
+    <string name="event_end_time">Event end time</string>
+    <string name="button_add_new_event">Add new event</string>
 </resources>

@@ -22,7 +22,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.icycoke.android.medication_reminder.fragment.LocationFragment;
-import com.icycoke.android.medication_reminder.fragment.PeriodicFragment;
+import com.icycoke.android.medication_reminder.fragment.EventFragment;
 import com.icycoke.android.medication_reminder.persistence.AppDatabase;
 import com.icycoke.android.medication_reminder.pojo.SavedLocation;
 
@@ -44,7 +44,7 @@ public class FunctionsActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.navigation_periodic:
-                            selectedFragment = new PeriodicFragment();
+                            selectedFragment = new EventFragment();
                             break;
                         case R.id.navigation_location:
                             selectedFragment = new LocationFragment();
@@ -107,7 +107,7 @@ public class FunctionsActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, new PeriodicFragment())
+                .replace(R.id.fragment_container, new EventFragment())
                 .commit();
 
         appDatabase = AppDatabase.getInstance(getApplicationContext());
