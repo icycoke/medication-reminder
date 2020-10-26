@@ -47,25 +47,25 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/eventLocationEditText" />
 
-    <EditText
-            android:id="@+id/eventStartTimeEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="@string/event_start_time"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/eventDescriptionEditText" />
+    <!--    <EditText
+                android:id="@+id/eventStartTimeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/event_start_time"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eventDescriptionEditText" />-->
 
-    <EditText
-            android:id="@+id/eventEndTimeEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="@string/event_end_time"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/eventStartTimeEditText" />
+    <!--    <EditText
+                android:id="@+id/eventEndTimeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/event_end_time"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eventStartTimeEditText" />-->
 
     <Button
             android:id="@+id/buttonAddEvent"
@@ -76,6 +76,6 @@
             android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/eventEndTimeEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/eventDescriptionEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

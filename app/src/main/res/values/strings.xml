@@ -25,4 +25,5 @@
     <string name="event_start_time">Event start time</string>
     <string name="event_end_time">Event end time</string>
     <string name="button_add_new_event">Add new event</string>
+    <string name="event_field_empty_alert">Please fill all the fields!</string>
 </resources>
