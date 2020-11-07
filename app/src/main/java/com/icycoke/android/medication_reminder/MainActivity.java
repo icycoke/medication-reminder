@@ -9,8 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.maps.MapView;
 import com.icycoke.android.medication_reminder.persistence.AppDatabase;
 import com.icycoke.android.medication_reminder.pojo.OpenApp;
+import com.icycoke.android.medication_reminder.pojo.SavedLocation;
 import com.icycoke.android.medication_reminder.welcome.MyWelcomeActivity;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {

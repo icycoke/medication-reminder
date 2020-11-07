@@ -31,10 +31,15 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.icycoke.android.medication_reminder.FunctionsActivity;
+import com.icycoke.android.medication_reminder.MainActivity;
 import com.icycoke.android.medication_reminder.R;
 import com.icycoke.android.medication_reminder.persistence.AppDatabase;
 import com.icycoke.android.medication_reminder.pojo.SavedLocation;
 import com.icycoke.android.medication_reminder.util.GeofenceUtil;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class LocationFragment extends Fragment
         implements OnMapReadyCallback, FunctionsActivity.SetHomeOnClickListener {
@@ -109,6 +114,27 @@ public class LocationFragment extends Fragment
         googleMap.setMyLocationEnabled(true);
 
         addGeofence(latLng, GEOFENCE_RADIUS_DEFAULT);
+
+        Thread collectDataThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.d(TAG, "run: writing data to file");
+                File file = new File(getActivity().getFilesDir().getAbsolutePath() + "/home_location_history.csv");
+                try {
+                    FileWriter fileWriter = new FileWriter(file, true);
+                    SavedLocation currentHome = appDatabase.savedLocationDao().getCurrentHome();
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("lat: ").append(currentHome.latitude).append('\t')
+                            .append("lng: ").append(currentHome.longitude).append('\n');
+                    fileWriter.write(sb.toString());
+                    fileWriter.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        collectDataThread.start();
     }
 
     private void addCircle(LatLng latLng, float radius) {
