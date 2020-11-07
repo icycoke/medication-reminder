@@ -9,8 +9,7 @@ Medication Reminder is mainly designed for two common scenarios of heart patient
 ![User guide](https://github.com/icycoke/img-repo/blob/main/medication-reminder/guide2.png)
 
 ## Project Structure
-![Medication Reminder Flowchart](https://github.com/icycoke/img-repo/blob/main/medication-reminder/medication_reminder_flowchart)
-.png)
+![Medication Reminder Flowchart](https://github.com/icycoke/img-repo/blob/main/medication-reminder/medication_reminder_flowchart.png)
 
 All source code files are under `com.icycoke.android.medication_reminder` package
 
