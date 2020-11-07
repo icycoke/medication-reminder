@@ -3,7 +3,7 @@ Medication Reminder is mainly designed for two common scenarios of heart patient
 
 ![Welcome Interface](https://github.com/icycoke/img-repo/blob/main/medication-reminder/welcome.png)
 
-(The welcome interface is created by using an open-source framework [Welcome](https://github.com/icycoke/welcome-android))
+*(The welcome interface is created by using an open-source framework [Welcome](https://github.com/icycoke/welcome-android))*
 
 ![User guide](https://github.com/icycoke/img-repo/blob/main/medication-reminder/guide1.png)
 ![User guide](https://github.com/icycoke/img-repo/blob/main/medication-reminder/guide2.png)
