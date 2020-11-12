@@ -13,6 +13,6 @@ Medication Reminder is mainly designed for two common scenarios of heart patient
 
 All source code files are under `com.icycoke.android.medication_reminder` package
 
-The collected data file will be saved as `getFilesDir().getAbsolutePath() + "/home_location_history.csv"` which is `/data/data/com.icycoke.musicalpedometer/files/data.csv` as default
+The collected data file will be saved as `getFilesDir().getAbsolutePath() + "/home_location_history.csv"` which is `/data/data/com.icycoke.musicalpedometer/files/home_location_history.csv` as default
 
 DAO layer files are under `com.icycoke.android.medication_reminder.persistence` package
